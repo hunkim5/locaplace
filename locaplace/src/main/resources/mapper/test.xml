@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.locaplace.test.mapper.TestMapper">
+    <select id="selectTestList" resultType="com.locaplace.test.dto.TestDto">
+    	select * from test
+ 	</select>
+ 	<insert id="insertTest">
+ 		insert into test(str)values(#{str})
+ 	</insert>
+ 	<update id="updateTest">
+ 		update test set
+ 		num = #{num}
+ 		where str=#{str}
+ 	</update>
+</mapper>
